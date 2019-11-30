@@ -1,1 +1,4 @@
 log
+protogen/data-plane-api
+protogen/googleapis
+protogen/protoc-gen-validate
