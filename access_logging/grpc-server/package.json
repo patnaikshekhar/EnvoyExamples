@@ -1,0 +1,20 @@
+{
+  "name": "grpc-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon main.js",
+    "generate-stubs": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./static_codegen --grpc_out=./static_codegen --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` -I ../../protogen/data-plane-api -I ../../protogen/googleapis -I ../../protogen/protoc-gen-validate ../../protogen/protoc-gen-validate/validate/validate.proto  ../../protogen/data-plane-api/envoy/type/*.proto ../../protogen/data-plane-api/envoy/api/v2/core/*.proto ../../protogen/data-plane-api/envoy/service/accesslog/v2/als.proto ../../protogen/data-plane-api/envoy/data/accesslog/v2/*.proto",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-protobuf": "^3.11.0",
+    "grpc": "^1.24.2",
+    "grpc-tools": "^1.8.0",
+    "nodemon": "^2.0.1"
+  }
+}
