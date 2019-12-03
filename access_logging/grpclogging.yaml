@@ -16,9 +16,9 @@ static_resources:
       - name: envoy.http_connection_manager
         config:
           access_log:
-          - name: envoy.envoy.http_grpc_access_log
+          - name: envoy.http_grpc_access_log
             config:
-              commonConfig:
+              common_config:
                 log_name: SAMPLE
                 envoy_service:
                   cluster_name: access_log_service
@@ -58,4 +58,4 @@ static_resources:
     hosts:
     - socket_address:
         address: localhost
-        port_value: 10000
+        port_value: 50051
