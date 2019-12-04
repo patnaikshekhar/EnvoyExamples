@@ -19,9 +19,10 @@ static_resources:
           - name: envoy.http_grpc_access_log
             config:
               common_config:
-                log_name: SAMPLE
-                envoy_service:
-                  cluster_name: access_log_service
+                log_name: sample
+                grpc_service:
+                  envoy_grpc:
+                    cluster_name: access_log_service
           stat_prefix: ingress_http
           codec_type: AUTO
           route_config:
