@@ -6,3 +6,4 @@ A number of examples on how to configure envoy proxy for various use cases.
 2. Access Logging
     a. File
     b. Stdout
+    c. gRPC
